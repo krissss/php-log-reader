@@ -1,0 +1,17 @@
+{
+    "name": "kriss/log-reader",
+    "description": "Log Reader For PHP",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "kriss",
+            "email": "462679766@qq.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "symfony/http-foundation": ">4.0",
+        "nesbot/carbon": ">1.0"
+    }
+}
