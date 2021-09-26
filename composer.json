@@ -17,6 +17,8 @@
     "nesbot/carbon": ">1.0"
   },
   "autoload": {
-    "Kriss\\LogReader\\": "src"
+    "psr-4": {
+      "Kriss\\LogReader\\": "src"
+    }
   }
 }
