@@ -1,6 +1,6 @@
 # Log Reader For PHP
 
-![preview](https://github.com/krissss/php-log-reader/raw/master/preview.jpg)
+![preview](https://github.com/krissss/php-log-reader/raw/master/preview.png)
 
 # Installation
 
