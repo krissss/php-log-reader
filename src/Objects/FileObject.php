@@ -28,7 +28,7 @@ class FileObject
 
     public function getModifyAtForHumans(): string
     {
-        $carbon = new Carbon($this->file->getMTime());
+        $carbon = Carbon::createFromTimestamp($this->file->getMTime());
         return "<span title='{$carbon->format('Y-m-d H:i:s')}'>{$carbon->diffForHumans()}</span>";
     }
 
