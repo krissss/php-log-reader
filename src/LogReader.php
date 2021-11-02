@@ -126,9 +126,17 @@ class LogReader
         foreach ((clone $finder)->sortByName()->directories() as $directory) {
             $data['dirs'][] = new DirObject($directory, $this->getRelativePath($directory->getRealPath()));
         }
-        foreach ((clone $finder)->sortByModifiedTime()->reverseSorting()->files()->name($this->logExtensions) as $file) {
+
+        // for finder > 4.4 use: (clone $finder)->sortByModifiedTime()->reverseSorting()->files()->name($this->logExtensions)
+        $finder = (clone $finder)->sortByModifiedTime()->files();
+        foreach ($this->logExtensions as $extension) {
+            $finder->name($extension);
+        }
+        foreach ($finder as $file) {
             $data['files'][] = new FileObject($file, $this->getRelativePath($file->getRealPath()));
         }
+        $data['files'] = array_reverse($data['files']);
+
         return $data;
     }
 
