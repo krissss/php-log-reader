@@ -50,8 +50,8 @@
                     <td>
                         <?php if ($file->getSizeKB() < $viewMaxSize): ?>
                             <a href="<?= $urlBuilder('view', ['key' => $file->getKey()]) ?>"
+                               class="btn btn-primary btn-xs" target="_blank">view</a>
                         <?php endif; ?>
-                           class="btn btn-primary btn-xs" target="_blank">view</a>
                         <a href="<?= $urlBuilder('tail', ['key' => $file->getKey(), 'line' => $tailLine]) ?>"
                            class="btn btn-primary btn-xs" target="_blank">tail</a>
                         <a href="<?= $urlBuilder('download', ['key' => $file->getKey()]) ?>"
