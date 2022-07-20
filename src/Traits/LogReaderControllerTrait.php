@@ -46,7 +46,7 @@ trait LogReaderControllerTrait
         }
 
         return new Response(file_get_contents($file), 200, [
-            'Content-Type' => 'text/event-stream',
+            'Content-Type' => 'text/plain',
         ]);
     }
 
@@ -58,7 +58,7 @@ trait LogReaderControllerTrait
         $result = shell_exec("tail -n {$line} {$file}");
 
         return new Response($result, 200, [
-            'Content-Type' => 'text/event-stream',
+            'Content-Type' => 'text/plain',
         ]);
     }
 
