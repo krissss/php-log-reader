@@ -34,7 +34,7 @@ class FileObject
 
     public function getSizeKB(): int
     {
-        return round($this->file->getSize() / 1024, 2);
+        return intval($this->file->getSize() / 1024);
     }
 
     public function getSizeForHumans(): string
