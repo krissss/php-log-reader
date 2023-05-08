@@ -16,7 +16,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Log Reader</title>
-    <link rel="stylesheet" href="<?= $bootstrapCssUrl ?>" crossorigin="anonymous">
+    <link rel="stylesheet" href="<?= $bootstrapCssUrl ?>">
 </head>
 <body>
 <div class="container">
