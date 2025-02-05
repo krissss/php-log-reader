@@ -54,7 +54,7 @@ trait LogReaderControllerTrait
     {
         $this->checkIsEnable();
         $file = $this->getPathFromRequest();
-        $line = $this->getRequest()->get('line', $this->getLogReader()->getTailDefaultLine());
+        $line = (int)$this->getRequest()->get('line', $this->getLogReader()->getTailDefaultLine());
         $result = shell_exec("tail -n {$line} {$file}");
 
         return new Response($result, 200, [
